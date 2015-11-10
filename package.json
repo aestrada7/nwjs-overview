@@ -1,0 +1,14 @@
+{
+  "name": "nwjs-overview",
+  "version": "0.0.1",
+  "main": "app/index.html",
+
+  "window": {
+    "width": 200,
+    "height": 200
+  },
+
+  "devDependencies": {
+    "nw": "^0.12.3"
+  }
+}
