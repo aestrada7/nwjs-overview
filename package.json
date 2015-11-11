@@ -2,13 +2,14 @@
   "name": "nwjs-overview",
   "version": "0.0.1",
   "main": "app/index.html",
-
   "window": {
-    "width": 200,
-    "height": 200
+    "width": 600,
+    "height": 400,
+    "min_width": 400,
+    "min_height": 350
   },
-
   "devDependencies": {
+    "jquery": "^2.1.4",
     "nw": "^0.12.3"
   }
 }

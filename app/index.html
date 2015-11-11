@@ -1,12 +1,13 @@
 <html>
   <head>
     <title>NW.js Overview</title>
+    <link rel="stylesheet" type="text/css" href="./index.css" />
   </head>
   <body>
-    <div id="os"></div>
-    <script>
-      var os = require('os');
-      document.getElementById('os').innerHTML = os.platform();
-    </script>
+    <button class="right-click">Right Click On Me</button>
+    <div class="os"></div>
+    <div class="text-content"></div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>
