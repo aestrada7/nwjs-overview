@@ -9,6 +9,8 @@
     "min_height": 350
   },
   "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-shell": "0.7.0",
     "jquery": "^2.1.4",
     "nw": "^0.12.3"
   }
