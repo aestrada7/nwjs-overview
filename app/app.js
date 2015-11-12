@@ -50,3 +50,42 @@ $('.right-click').on('contextmenu', function(e) {
   menu.popup(e.target.offsetLeft, e.target.offsetTop);
   return false;
 });
+
+//file load-save
+$('.load-text').on('click', function() {
+  $('#file-import-dialog').click();
+});
+
+$('.save-text').on('click', function() {
+  $('#file-export-dialog').click();
+});
+
+$('#file-export-dialog').on('change', function() {
+  var exportPath = $('#file-export-dialog').val();
+  if(exportPath) exportFile(exportPath);
+});
+
+exportFile = function(filename) {
+  fs.writeFile(filename, $('.text-content').val(), 'utf8');
+  $('#file-export-dialog').val('');
+}
+
+$('#file-import-dialog').on('change', function() {
+  var importPath = $('#file-import-dialog').val();
+  if(importPath) importFile(importPath);
+});
+
+importFile = function(filename) {
+  fs.readFile(filename, 'utf8', function(err, data) {
+    $('.text-content').val(data);
+  });
+  $('#file-import-dialog').val('');
+}
+
+//tray
+var tray = new gui.Tray({
+  icon: 'app/icon.png',
+  tooltip: 'NW.js Overview'
+});
+
+tray.menu = fileMenu;

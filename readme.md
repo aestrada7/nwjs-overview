@@ -6,5 +6,5 @@
 * `git clone https://github.com/aestrada7/nwjs-overview.git`
 * `cd nwjs-overview`
 * `npm install`
-* `grunt develop`
+* `grunt develop` or `grunt develop-load` to load the program with arguments
 * nw.exe will load automatically

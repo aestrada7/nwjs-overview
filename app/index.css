@@ -1,5 +1,23 @@
+body {
+  font-family: 'Segoe UI', 'Tahoma';
+}
+
+textarea {
+  font-family: 'Segoe UI', 'Tahoma';
+  width: 200px;
+  height: 100px;
+}
+
+button {
+  font-family: 'Segoe UI', 'Tahoma';
+}
+
+.hide {
+  display: none;
+}
+
 .right-click {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 10px;
+  top: 10px;
 }

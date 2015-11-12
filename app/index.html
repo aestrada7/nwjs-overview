@@ -6,7 +6,13 @@
   <body>
     <button class="right-click">Right Click On Me</button>
     <div class="os"></div>
-    <div class="text-content"></div>
+    <textarea class="text-content"></textarea><br>
+    <button class="load-text">Load</button>
+    <button class="save-text">Save As</button>
+
+    <input class="hide" id="file-export-dialog" type="file" accept=".txt" nwsaveas>
+    <input class="hide" id="file-import-dialog" type="file" accept=".txt">
+
     <script src="../node_modules/jquery/dist/jquery.js"></script>
     <script src="./app.js"></script>
   </body>
