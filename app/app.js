@@ -24,7 +24,7 @@ var fileMenu = new gui.Menu();
 fileMenu.append(new gui.MenuItem({
   label: 'Open',
   click: function() {
-    gui.App.quit();
+    $('#file-import-dialog').click();
   },
   key: 'o',
   modifiers: 'ctrl'
