@@ -22,7 +22,7 @@ var menu = new gui.Menu({ type: 'menubar' });
 var fileMenu = new gui.Menu();
 
 fileMenu.append(new gui.MenuItem({
-  label: 'Open',
+  label: 'Load',
   click: function() {
     $('#file-import-dialog').click();
   },
@@ -44,6 +44,22 @@ menu.append(new gui.MenuItem({
   submenu: fileMenu
 }));
 win.menu = menu;
+
+var trayMenu = new gui.Menu();
+
+trayMenu.append(new gui.MenuItem({
+  label: 'Restore',
+  click: function() {
+    win.restore();
+  }
+}));
+
+trayMenu.append(new gui.MenuItem({
+  label: 'Quit',
+  click: function() {
+    gui.App.quit();
+  }
+}));
 
 $('.right-click').on('contextmenu', function(e) {
   e.preventDefault();
@@ -88,4 +104,4 @@ var tray = new gui.Tray({
   tooltip: 'NW.js Overview'
 });
 
-tray.menu = fileMenu;
+tray.menu = trayMenu;
