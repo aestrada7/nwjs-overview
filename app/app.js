@@ -13,7 +13,7 @@ args.forEach(function(item) {
       $('.text-content').html(data);
     });
   }
-}); 
+});
 
 //menu
 var win = gui.Window.get();
@@ -47,7 +47,6 @@ menu.append(new gui.MenuItem({
   label: 'File',
   submenu: fileMenu
 }));
-
 win.menu = menu;
 
 var trayMenu = new gui.Menu();
