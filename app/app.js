@@ -13,13 +13,17 @@ args.forEach(function(item) {
       $('.text-content').html(data);
     });
   }
-});
+}); 
 
 //menu
 var win = gui.Window.get();
 var menu = new gui.Menu({ type: 'menubar' });
 
 var fileMenu = new gui.Menu();
+
+if(os.platform() === 'darwin') {
+  menu.createMacBuiltin('nw.js Overview');
+}
 
 fileMenu.append(new gui.MenuItem({
   label: 'Load',
@@ -43,6 +47,7 @@ menu.append(new gui.MenuItem({
   label: 'File',
   submenu: fileMenu
 }));
+
 win.menu = menu;
 
 var trayMenu = new gui.Menu();
